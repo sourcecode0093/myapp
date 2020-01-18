@@ -1,9 +1,10 @@
 "use strict";
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
     return new (P || (P = Promise))(function (resolve, reject) {
         function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
         function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
@@ -34,14 +35,14 @@ function createApplication(root, globsOrControllers, options = {}) {
             app.use(cors(Object.assign(corsOptions, options.cors)));
         }
         const staticAssetsOptions = Object.assign({
-            root: Path.join(root, '..', 'public'),
+            root: Path.join(root, 'public'),
             prefix: '/public',
             maxage: 86400000,
         }, options.staticAssets);
         logger.info('站点资源目录public');
         app.use(mount(staticAssetsOptions.prefix, koaStatic(staticAssetsOptions.root, staticAssetsOptions)));
         logger.info('站点目录www');
-        app.use(koaStatic(Path.join(root, '..', 'www'), {
+        app.use(koaStatic(Path.join(root, 'www'), {
             maxage: 86400000,
         }));
         if (options.bodyparser !== false) {

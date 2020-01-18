@@ -1,6 +1,6 @@
 {
   "name": "souljs",
-  "version": "3.4.5",
+  "version": "3.4.6",
   "description": "A nodejs framework for building concise and decorative applications written by typescript",
   "main": "dist/index.js",
   "types": "lib/index.ts",
@@ -35,7 +35,6 @@
     "@types/koa-router": "^7.0.37",
     "@types/koa-static": "^4.0.0",
     "@types/node": "^10.12.19",
-    "@types/swagger-ui-dist": "^3.0.0",
     "prettier": "1.15.3",
     "ts-node": "^7.0.1",
     "tslint": "5.12.1",

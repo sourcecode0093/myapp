@@ -46,7 +46,7 @@ export async function createApplication(
 
   const staticAssetsOptions = Object.assign(
     {
-      root: Path.join(root, '..', 'public'),
+      root: Path.join(root, 'public'),
       prefix: '/public',
       maxage: 86400000,
     },
@@ -58,7 +58,7 @@ export async function createApplication(
 
   logger.info('站点目录www');
   app.use(
-    koaStatic(Path.join(root, '..', 'www'), {
+    koaStatic(Path.join(root, 'www'), {
       maxage: 86400000,
     }),
   );
