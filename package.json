@@ -1,5 +1,5 @@
 {
-  "name": "souljs",
+  "name": "myapp",
   "version": "3.4.6",
   "description": "A nodejs framework for building concise and decorative applications written by typescript",
   "main": "dist/index.js",
@@ -13,17 +13,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/test/souljs.git"
+    "url": "git+https://github.com/test/myapp.git"
   },
   "keywords": [
-    "souljs"
+    "myapp"
   ],
   "author": "renkun",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/test/souljs/issues"
+    "url": "https://github.com/test/myapp/issues"
   },
-  "homepage": "https://github.com/test/souljs#readme",
+  "homepage": "https://github.com/test/myapp#readme",
   "devDependencies": {
     "@types/cron": "^1.6.0",
     "@types/glob": "^7.1.1",
